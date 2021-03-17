@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+#error {
+  color: red;
+}
+
+#loading {
+  color: blue;
+}
+
+#hello,
+#error,
+#loading {
+  margin: 30px;
+  text-align: center;
+}
