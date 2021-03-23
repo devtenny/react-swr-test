@@ -1,22 +1,5 @@
 import React from 'react'
-import useSWR from 'swr'
-
-declare global {
-  interface Window {
-    count: number
-  }
-}
-
-function useCounter() {
-  const { data, mutate } = useSWR('state', () => window.count)
-  return {
-    data: data || 0,
-    mutate: (count: number) => {
-      window.count = count
-      mutate()
-    },
-  }
-}
+import useCounter from '../hooks/useCounter'
 
 export default function Counter() {
   const { data, mutate } = useCounter()
