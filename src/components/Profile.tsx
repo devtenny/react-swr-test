@@ -1,14 +1,14 @@
 import useSWR from 'swr'
 import axios from 'axios'
-import Error from './components/Error'
-import Loading from './components/Loading'
+import Error from './Error'
+import Loading from './Loading'
 
 interface Props {
   id: number
 }
 
 const Profile = ({ id }: Props) => {
-  const url = `/api/public/users/${id}`
+  const url = `https://vreview.tv/api/public/users/${id}`
 
   // const fetcher = (url: string) => fetch(url).then((res) => res.json())
   const fetcher = (url: string) => axios.get(url).then((res) => res.data)
