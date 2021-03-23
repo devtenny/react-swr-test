@@ -1,9 +1,15 @@
 import React from 'react'
 import './App.css'
-import Profile from './Profile'
+import Counter from './components/Counter'
+import Profile from './components/Profile'
 
 function App() {
-  return <Profile id={35147} />
+  return (
+    <>
+      <Profile id={35147} />
+      <Counter />
+    </>
+  )
 }
 
 export default App
